@@ -1,0 +1,61 @@
+Create a single-page interactive Birthday Wishes web application using pure HTML5, CSS3, and vanilla JavaScript (no external build tools required so it deploys directly on GitHub Pages). 
+
+Design & Global Aesthetic:
+- Dark, romantic, starry-night theme: deep black/brown radial gradient background (`#0a0505` to `#1a0d0d`) with animated floating golden firefly/bokeh particles across the entire viewport.
+- Soft glowing typography in white, warm gold (`#ffd700`), and pastel pink (`#ff7eb3`), using elegant serif/cursive fonts for headings (e.g., 'Playfair Display' or 'Dancing Script') and clean sans-serif ('Poppins') for UI controls.
+- Smooth fade transitions between 9 sequential stages, plus an optional toggleable background music player.
+
+Implement the exact 9-stage user flow:
+
+1. Stage 1 — Gift Box Intro:
+   - Heading: "A surprise awaits you... ✨" with subtitle "Something special just for you 🎁".
+   - Centerpiece: A 3D-styled pink gift box with a golden ribbon and floating hearts/sparkles.
+   - Caption below: "Tap the gift to open 🎁". Clicking triggers a lid-opening animation and transitions to Stage 2.
+
+2. Stage 2 — Lock Screen Passcode:
+   - Dark translucent glassmorphic mobile lock screen card showing a live digital clock (e.g., `02:44`), current date, and a golden padlock icon.
+   - Text: "Enter the secret code 🔐" and a configurable hint (e.g., "Hint: Try 1234").
+   - 4 PIN indicator dots and an interactive 0–9 numeric keypad.
+   - Entering the correct 4-digit PIN unlocks the padlock with a smooth animation and transitions to Stage 3; incorrect PINs shake the dots.
+
+3. Stage 3 — Theatre Curtain Reveal:
+   - Full-screen deep red velvet vertical-striped curtains meeting in the center.
+   - Center button: "🎭 Open".
+   - Clicking smoothly parts the left and right curtains outward, revealing a dark starry canvas with a centered text fade-in: "There's something special I want to tell you...", before automatically advancing to Stage 4.
+
+4. Stage 4 — Live Age Counter & Birthday Cake:
+   - Heading: "Happy Birthday [Friend's Name] 🎂" with subtitle "The World Has Been Better Since [Birth Year] ✨".
+   - Live ticking counter calculating exact Years, Days, Hours, and Seconds elapsed since the friend's birth date/time.
+   - Below the counter: An illustrated/CSS-animated two-tier pink birthday cake with glowing candles.
+   - Interactive prompt: "✨ Blow out the candles" (clicking extinguishes the candle flames with smoke wisps and triggers a confetti burst), followed by a button "See Our Memories 📸".
+
+5. Stage 5 — Cute Memories Photo Carousel:
+   - Heading: "Cute Memories 💕".
+   - Centered polaroid/rounded-frame photo card with soft golden outer glow, displaying custom images and captions underneath (e.g., "Our first adventure together 💕", "Stargazing till midnight ✨", "My favorite smile 🥰").
+   - Allow clicking the card or navigation arrows to cycle through photos, with a button below: "Next Surprise 🎁".
+
+6. Stage 6 — Pop the Wishes (Balloon Mini-Game):
+   - Heading: "Pop the Wishes 🎈" with subtitle "Tap each balloon to reveal a little wish".
+   - Display 6 floating, gently bobbing colorful balloons (pink, orange, blue, purple, green, red) and a tracker "Popped: X/6".
+   - Clicking a balloon plays a pop animation, increments the counter, and reveals a toast/card message (e.g., "Thank you for every single laugh 😊", "You make my whole world brighter ✨").
+   - Once all 6 are popped, reveal a "Continue →" button.
+
+7. Stage 7 — 3x3 Sliding Tile Puzzle:
+   - Heading: "Birthday Puzzle 🧩" with subtitle "Slide the pieces to complete the picture ✨".
+   - Track "Moves: X" alongside a small reference thumbnail preview.
+   - A solvable 3x3 sliding tile puzzle using one of the friend's photos, plus a "Shuffle Again" button.
+   - When solved, merge the tiles seamlessly into the full glowing image, show "🎉 Puzzle completed! ✨", and reveal the button "One Last Surprise ✨".
+
+8. Stage 8 — Interactive Scratch Card:
+   - Heading: "One Last Surprise ✨" with subtitle "Scratch the card to reveal your wish 🎁".
+   - HTML5 `<canvas>` scratch-off overlay (purple-pink gradient texture reading "Scratch here 😊 / Rub your finger or cursor over the card").
+   - Scratching away >50% of the top layer automatically clears the card to reveal a hidden photo card with glowing text ("Happy Birthday! May all your dreams come true ✨") and a button "Read Your Letter 💌".
+
+9. Stage 9 — Typewriter Love/Friendship Letter:
+   - First show a glowing closed envelope ("A Letter Just For You") with "Tap to open 💌".
+   - Clicking opens the envelope into a dark translucent parchment card and types out a customizable multi-paragraph birthday letter character-by-character with a blinking cursor, ending with a heartfelt sign-off.
+
+Code Structure:
+- Provide clean, well-commented code split into `index.html`, `style.css`, and `script.js` (or a single self-contained `index.html` for easy deployment).
+- Put all customizable variables (friend's name, secret PIN, birth date/time, photo URLs, balloon wishes, and final letter text) inside a single `CONFIG` object at the very top of `script.js` so they are effortless to personalize.
+
